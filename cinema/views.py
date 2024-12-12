@@ -140,7 +140,6 @@ class OrderViewSet(viewsets.ModelViewSet):
                 "tickets__movie_session__movie"
             )
 
-        # if self.action == "retrieve":
         return queryset
 
     def get_serializer_class(self):
@@ -149,7 +148,6 @@ class OrderViewSet(viewsets.ModelViewSet):
         if self.action == "list":
             serializer = OrderListSerializer
 
-        # if self.action == "retrieve":
         return serializer
 
     def perform_create(self, serializer):
